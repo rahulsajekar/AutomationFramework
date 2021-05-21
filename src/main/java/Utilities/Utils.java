@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.util.HashMap;
 
 public class Utils {
-	
+	// this class include pure java code
 	public static HashMap<String, String> envVars = new HashMap<String, String>();
 	public static void initializeEnvVars() {
 		try {
