@@ -73,6 +73,7 @@ public class WebAutomationTest {
 	}
 	
 	public void enterText(WebElement e,String text) {
+		e.clear();
 		e.sendKeys(text);
 	}
 
@@ -84,6 +85,10 @@ public class WebAutomationTest {
 	}
 	public String getCurrentURL() {
 		return driver.getCurrentUrl();
+	}
+	
+	public String getErrorMessage() {
+		return driver.findElementById("spanMessage").getText();
 	}
 	
 }
