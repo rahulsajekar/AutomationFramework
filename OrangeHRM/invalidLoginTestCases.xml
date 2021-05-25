@@ -1,0 +1,8 @@
+<suite name="Invalid Login test Cases">
+	<parameter name="browserName" value="chrome"/>
+	<test name="Regression Test">
+		<classes>
+			<class name="OrangeHRM.testCases.invalidCredetials" />
+		</classes>
+	</test>
+</suite>
