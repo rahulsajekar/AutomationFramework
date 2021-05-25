@@ -91,4 +91,8 @@ public class WebAutomationTest {
 		return driver.findElementById("spanMessage").getText();
 	}
 	
+	public void closeBrowser() {
+		driver.quit();
+	}
+	
 }
