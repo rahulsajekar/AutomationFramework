@@ -1,0 +1,67 @@
+*** END to END Framework *** ( Practice build 2-3 frameworks )
+================================
+
+Flat Scripting (Without Frameworks)
+-----------------------------------
+  - tends to have lot of hard coding
+  - hard coding of element finding strategy and locators
+  - no reusable code
+  - lot of technical code
+  - no testing framework integration to create reports
+  - lack of methodical approach
+  - no directory structure created
+  
+FrameWork:
+---------
+  - It is a discipline approach of writing scripts
+  - No hard codings
+  - Script writing becomes less technical
+  - Reusability of code
+  - proper directory structure 
+  
+- test case should not contain inplementation of flow to exercise a business process like login
+  so if business process steps changes then test case will have an impact of that change
+  
+  
+Layers of Framework :
+---------------------
+Layer 1) Test Case ( New Package)
+Layer 2) Business logic implementation (Page Objects) (New Package)
+	Every Page supports multiple business processes
+	In Page Object we create different classes for each page present in application
+	and business processes supported by each page gets implemented as separate function in corresponding page class
+	create method to call element interaction from layer 3
+Layer 3) UI Interaction (New Project -> build jar file and add in to above project as dependency)
+	Open Browser,
+	Find Elements,
+	Interact with elements, etc.
+	
+Reduce Hard Coding:(Configuration File)(In a Layer 3)
+-------------------
+- Create Environment Variable file which include
+   - path of chromedriver
+   - url of application
+   
+- Write function to read above file provide values as a Utilities
+
+- the location of this file is set to System Environment Variable
+
+
+Object Repository : (In a Layer 3)
+------------------
+-This is a folder which conatain a file for every page present in application
+
+  - Each file includes the identification strategy of each element of that page in the below format
+     ElementName,Strategy(by id,name,xpath,etc),value
+  - store all elements of that page in a hashmap as below
+  	 ElemnetName, WebElement
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

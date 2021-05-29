@@ -1,0 +1,10 @@
+<suite name="Login test Cases">
+	<parameter name="browserName" value="chrome"/>
+	<parameter name="Username" value="Admin"/>
+	<parameter name="Password" value="admin123"/>
+	<test name="Regression Test">
+		<classes>
+			<class name="OrangeHRM.testCases.testLogin" />
+		</classes>
+	</test>
+</suite>
